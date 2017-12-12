@@ -1,14 +1,6 @@
 <?php
 require_once('common.php');
 
-// $stmt = $conn->prepare("INSERT INTO products(Title, Description, Price) VALUES (?, ?, ?)");
-// $stmt->bind_param("ssi", $title, $description, $price);
-// $title = "Tablet";
-// $description = "Description for tablet";
-// $price = "98";
-// $stmt->execute();
-// $stmt->close();
-
 $sql = "SELECT * from products RIGHT JOIN images on Id=productId ORDER BY Id";
 $result = $conn->query($sql);
 if($result->num_rows > 0) {
